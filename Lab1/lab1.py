@@ -3,12 +3,12 @@ import math
 
 
 def get_coef(index, prompt):
-    """Получение коэффициентов"""
+    """РџРѕР»СѓС‡РµРЅРёРµ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ"""
     try:
-        """Чтение из командной строки"""
+        """Р§С‚РµРЅРёРµ РёР· РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё"""
         coef_input = sys.argv[index]
     except:
-        """Ввод с клавиатуры"""
+        """Р’РІРѕРґ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹"""
         try:
             coef_input = float(input(prompt))
         except ValueError:
@@ -18,7 +18,7 @@ def get_coef(index, prompt):
 
 
 def get_sqRoots(root, result):
-    """Вычисление корней квадратного уравнения вида x^2 = n"""
+    """Р’С‹С‡РёСЃР»РµРЅРёРµ РєРѕСЂРЅРµР№ РєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ РІРёРґР° x^2 = n"""
     if root >= 0:
         root = math.sqrt(root)
         if root > 0:
@@ -27,7 +27,7 @@ def get_sqRoots(root, result):
 
 
 def get_roots(a, b, c):
-    """Вычисление корней уравнения"""
+    """Р’С‹С‡РёСЃР»РµРЅРёРµ РєРѕСЂРЅРµР№ СѓСЂР°РІРЅРµРЅРёСЏ"""
     result = []
     d = b * b - 4 * a * c
     print("Discriminant =", d)
@@ -44,7 +44,7 @@ def get_roots(a, b, c):
 
 
 def main():
-    a = get_coef(1, 'Enter real А:')
+    a = get_coef(1, 'Enter real ГЂ:')
     b = get_coef(2, 'Enter real B:')
     c = get_coef(3, 'Enter real C:')
     print('You entered: {}x^4 + {}x^2 + {} = 0'.format(a, b, c))
